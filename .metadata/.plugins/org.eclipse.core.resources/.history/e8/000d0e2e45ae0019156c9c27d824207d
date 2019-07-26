@@ -1,0 +1,9 @@
+package com.br.ctis.controle.de.turma.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.br.ctis.controle.de.turma.model.Aluno;
+
+public interface AlunoRepository extends JpaRepository<Aluno , Long> {
+
+}

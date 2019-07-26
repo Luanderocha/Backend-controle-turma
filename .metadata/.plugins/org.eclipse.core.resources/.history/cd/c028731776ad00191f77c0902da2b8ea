@@ -1,0 +1,14 @@
+package com.br.ctis.controle.de.turma.model;
+
+public class Aluno {
+
+	private String nome;
+	private int matricula;
+	private int cpf;
+	private int rg;
+	private int data;
+	private String genero;
+	private String email;
+	
+	
+}

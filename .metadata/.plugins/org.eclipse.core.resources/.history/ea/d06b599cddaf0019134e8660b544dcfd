@@ -1,0 +1,78 @@
+package com.br.ctis.controle.de.turma.model;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+
+
+@Entity
+public class Turma {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "turma_id")
+	private Long id;
+	
+	@OneToMany
+	@JoinColumn(name = "aluno_id")
+	private List<Aluno> alunos;
+	
+	private int periodo;
+	
+	@OneToOne
+	private Sala sala;
+	
+	@OneToMany
+	private List<Disciplina> disciplina;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public List<Aluno> getAlunos() {
+		return alunos;
+	}
+
+	public void setAlunos(List<Aluno> alunos) {
+		this.alunos = alunos;
+	}
+
+	public int getPeriodo() {
+		return periodo;
+	}
+
+	public void setPeriodo(int periodo) {
+		this.periodo = periodo;
+	}
+
+	public Sala getSala() {
+		return sala;
+	}
+
+	public void setSala(Sala sala) {
+		this.sala = sala;
+	}
+
+	public List<Disciplina> getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(List<Disciplina> disciplina) {
+		this.disciplina = disciplina;
+	}
+
+	
+
+}

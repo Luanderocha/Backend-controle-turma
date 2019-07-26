@@ -1,0 +1,46 @@
+package com.br.ctis.controle.de.turma.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.springframework.data.annotation.Id;
+
+@Entity
+public class Turma {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "turma_id")
+	private int id;
+	private int alunos;
+	private int periodo;
+	private String sala;
+	
+	
+	public int getAlunos() {
+		return alunos;
+	}
+	public void setAlunos(int alunos) {
+		this.alunos = alunos;
+	}
+	public int getPeriodo() {
+		return periodo;
+	}
+	public void setPeriodo(int periodo) {
+		this.periodo = periodo;
+	}
+	public String getSala() {
+		return sala;
+	}
+	public void setSala(String sala) {
+		this.sala = sala;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+}

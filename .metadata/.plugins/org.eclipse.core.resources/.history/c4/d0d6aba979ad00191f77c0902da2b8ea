@@ -1,0 +1,36 @@
+package com.br.ctis.controle.de.turma.model;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.springframework.data.annotation.Id;
+
+public class Sala {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	private int capacidade;
+	private int numero;
+		
+	public int getCapacidade() {
+		return capacidade;
+	}
+	public void setCapacidade(int capacidade) {
+		this.capacidade = capacidade;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+}

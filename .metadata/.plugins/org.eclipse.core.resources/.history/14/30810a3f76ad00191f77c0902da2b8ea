@@ -1,0 +1,10 @@
+package com.br.ctis.controle.de.turma.model;
+
+public class Turma {
+	
+	private int alunos;
+	private int periodo;
+	private String sala;
+	private int id;
+
+}

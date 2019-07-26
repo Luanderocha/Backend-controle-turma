@@ -1,0 +1,16 @@
+package com.br.ctis.controle.de.turma.service;
+
+import java.util.List;
+
+import com.br.ctis.controle.de.turma.model.Disciplina;
+import com.br.ctis.controle.de.turma.repository.DisciplinaRepository;
+
+public class DisciplinaService {
+	
+	public DisciplinaRepository disciplinaRepository;
+	
+	public List<Disciplina> listarDisciplinas(){
+		return (List<Disciplina>) this.disciplinaRepository.findAll();
+	}
+
+}

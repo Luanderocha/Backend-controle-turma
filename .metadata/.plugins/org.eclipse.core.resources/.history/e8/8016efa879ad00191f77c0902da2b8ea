@@ -1,0 +1,34 @@
+package com.br.ctis.controle.de.turma.model;
+
+public class Turma {
+	
+	private int alunos;
+	private int periodo;
+	private String sala;
+	private int id;
+	public int getAlunos() {
+		return alunos;
+	}
+	public void setAlunos(int alunos) {
+		this.alunos = alunos;
+	}
+	public int getPeriodo() {
+		return periodo;
+	}
+	public void setPeriodo(int periodo) {
+		this.periodo = periodo;
+	}
+	public String getSala() {
+		return sala;
+	}
+	public void setSala(String sala) {
+		this.sala = sala;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.br.ctis.controle.de.turma.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.br.ctis.controle.de.turma.model.Sala;
+import com.br.ctis.controle.de.turma.repository.SalaRepository;
+
+@Service
+public class SalaService {
+	
+	@Autowired
+	private SalaRepository salaRepository;
+	
+	public List<Sala> listarSalas() {
+		return this.salaRepository.findAll();
+	}
+	
+	public Sala buscarSalaId (Long id) {
+		return this.salaRepository.findById(id).get();
+	}
+
+}

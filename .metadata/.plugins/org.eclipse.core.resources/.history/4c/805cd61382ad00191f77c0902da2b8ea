@@ -1,0 +1,13 @@
+package com.br.ctis.controle.de.turma;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ControleDeTurmaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ControleDeTurmaApplication.class, args);
+	}
+
+}

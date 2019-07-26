@@ -1,0 +1,9 @@
+package com.br.ctis.controle.de.turma.model;
+
+public class Sala {
+	
+	private int capacidade;
+	private int numero;
+	private int id;
+
+}
