@@ -1,0 +1,103 @@
+package com.br.ctis.controle.de.turma.controller.dto;
+
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.br.ctis.controle.de.turma.model.Aluno;
+
+public class AlunoDto {
+
+	private Long id;
+	private String nome;
+	private Long matricula;
+	private Long cpf;
+	private Long rg;
+	private String genero;
+	private String email;
+
+	public AlunoDto(Aluno aluno) {
+		this.id = aluno.getId();
+		this.nome = aluno.getNome();
+		this.matricula = aluno.getMatricula();
+		this.cpf = aluno.getCpf();
+		this.rg = aluno.getRg();
+		this.genero = aluno.getGenero();
+		this.email = aluno.getEmail();
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+	public Long getMatricula() {
+		return matricula;
+	}
+
+
+	public void setMatricula(Long matricula) {
+		this.matricula = matricula;
+	}
+
+
+	public Long getCpf() {
+		return cpf;
+	}
+
+
+	public void setCpf(Long cpf) {
+		this.cpf = cpf;
+	}
+
+
+	public Long getRg() {
+		return rg;
+	}
+
+
+	public void setRg(Long rg) {
+		this.rg = rg;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public static List<AlunoDto> convertetListaDto(List<Aluno> alunos) {
+		return alunos.stream().map(AlunoDto::new).collect(Collectors.toList());
+	}
+
+}

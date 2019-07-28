@@ -1,0 +1,41 @@
+package com.br.ctis.controle.de.turma.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.br.ctis.controle.de.turma.model.Disciplina;
+import com.br.ctis.controle.de.turma.repository.DisciplinaRepository;
+
+@Service
+public class DisciplinaService {
+	
+	@Autowired
+	public DisciplinaRepository disciplinaRepository;
+	
+	public List<Disciplina> listarDisciplinas(){
+		return this.disciplinaRepository.findAll();
+	}
+	
+	public Disciplina buscarDisciplinaId(Long id) {
+		return this.disciplinaRepository.findById(id).get();
+	}
+	
+	@Transactional
+	public void salvarDisciplina(Disciplina disciplina){
+		this.disciplinaRepository.save(disciplina);
+	}
+	
+	public Disciplina atualizarDisciplina(Disciplina disciplina) {
+		return this.disciplinaRepository.save(disciplina);
+	}
+	
+	
+	public void deletarDisciplinaId(Long id) {
+		this.disciplinaRepository.deleteById(id);
+	}
+
+}

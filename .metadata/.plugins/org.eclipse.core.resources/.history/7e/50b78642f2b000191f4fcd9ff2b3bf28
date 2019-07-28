@@ -1,0 +1,44 @@
+package com.br.ctis.controle.de.turma.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.br.ctis.controle.de.turma.model.Sala;
+import com.br.ctis.controle.de.turma.repository.SalaRepository;
+
+@Service
+public class SalaService {
+	
+	@Autowired
+	private SalaRepository salaRepository;
+	
+	public List<Sala> listarSalas() {
+		return this.salaRepository.findAll();
+	}
+	
+	public Sala buscarSalaId (Long id) {
+		return this.salaRepository.findById(id).get();
+	}
+	
+	@Transactional
+	public void salvarSala(Sala sala) {
+		this.salaRepository.save(sala);
+	}
+	
+	public Sala atualizarSala(Sala sala) {
+		return this.salaRepository.save(sala);
+	}
+	
+	public void deletarSala(Sala sala) {
+		this.salaRepository.delete(sala);
+	}
+	
+	public void deletarSalaId(Long id) {
+		this.salaRepository.deleteById(id);
+	}
+
+}

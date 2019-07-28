@@ -1,0 +1,29 @@
+package com.br.ctis.controle.de.turma.controller.dto;
+
+import com.br.ctis.controle.de.turma.model.Aluno;
+
+public class ListarAlunoDto {
+
+	private String nome;
+	private Long matricula;
+	private String email;
+
+	public ListarAlunoDto(Aluno aluno) {
+		this.nome = aluno.getNome();
+		this.matricula = aluno.getMatricula();
+		this.email = aluno.getEmail();
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public Long getMatricula() {
+		return matricula;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+}

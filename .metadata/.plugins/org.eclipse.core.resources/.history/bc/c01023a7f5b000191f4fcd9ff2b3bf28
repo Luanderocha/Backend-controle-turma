@@ -1,0 +1,44 @@
+package com.br.ctis.controle.de.turma.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.br.ctis.controle.de.turma.model.Turma;
+import com.br.ctis.controle.de.turma.repository.TurmaRepository;
+
+@Service
+public class TurmaService {
+
+	@Autowired
+	private TurmaRepository turmaRepository;
+
+	public List<Turma> listarTurmas() {
+		return this.turmaRepository.findAll();
+	}
+
+	public Turma buscarTurmaId(Long id) {
+		return this.turmaRepository.findById(id).get();
+	}
+
+	@Transactional
+	public void salvarturma(Turma turma) {
+		this.turmaRepository.save(turma);
+	}
+
+	public Turma atualizarTurma(Turma turma) {
+		return this.turmaRepository.save(turma);
+	}
+
+	public void deletarTurma(Turma turma) {
+		this.turmaRepository.delete(turma);
+	}
+
+	public void deletarTurmaId(Long id) {
+		this.turmaRepository.deleteById(id);
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.br.ctis.controle.de.turma.service;
+
+import java.util.List;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.br.ctis.controle.de.turma.model.Aluno;
+import com.br.ctis.controle.de.turma.repository.AlunoRepository;
+
+@Service
+public class AlunoService {
+
+	@Autowired
+	private AlunoRepository alunoRepository;
+
+	public List<Aluno> listarAluno() {
+		return this.alunoRepository.findAll();
+	}
+	
+	public Aluno buscarAlunoId(Long id) {
+		return this.alunoRepository.findById(id).get();
+	}
+
+	@Transactional
+	public Aluno salvarAluno(Aluno aluno) {
+		return this.alunoRepository.save(aluno);
+	}
+
+	public Aluno atualizarAluno(Aluno aluno) {
+		return this.alunoRepository.save(aluno);
+	}
+
+	public void deletarAluno(Aluno aluno) {
+		this.alunoRepository.delete(aluno);
+	}
+	
+	public void deletarAlunoId(Long id) {
+		this.alunoRepository.deleteById(id);
+	}
+	
+}

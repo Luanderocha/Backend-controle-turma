@@ -28,15 +28,16 @@
 <fullyQualifiedTypeName name="com.br.ctis.controle.de.turma.controller.dto.AlunoDto"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 <fullyQualifiedTypeName name="com.br.ctis.controle.de.turma.model.Aluno"/>
-<fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
 <fullyQualifiedTypeName name="io.swagger.annotations.Api"/>
 <fullyQualifiedTypeName name="javax.persistence.Temporal"/>
 <fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="io.swagger.annotations.ApiOperation"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+<fullyQualifiedTypeName name="io.swagger.annotations.ApiOperation"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
 </qualifiedTypeNameHistroy>
